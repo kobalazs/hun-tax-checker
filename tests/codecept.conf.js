@@ -1,6 +1,6 @@
 exports.config = {
   tests: './*_test.js',
-  output: './output',
+  output: '/results',
   helpers: {
     WebDriver: {
       url: 'http://localhost',

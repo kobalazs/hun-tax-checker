@@ -4,6 +4,7 @@ services:
   codecept:
     build: ./build/
     volumes:
+      - "./results:/results"
       - "./tests:/tests"
     depends_on:
       - selenium
