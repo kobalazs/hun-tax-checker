@@ -7,6 +7,8 @@ services:
       - "./tests:/tests"
     depends_on:
       - selenium
+    env_file:
+      - .env
     command: ["/usr/local/bin/wait-for-selenium.sh", "codeceptjs", "run"]
 
   selenium:
