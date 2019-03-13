@@ -1,0 +1,13 @@
+version: "3.4"
+
+services:
+  codecept:
+    build: ./build/
+    volumes:
+      - "./tests:/tests"
+    depends_on:
+      - selenium
+    command: ["/usr/local/bin/wait-for-selenium.sh", "codeceptjs", "run"]
+
+  selenium:
+    image: selenium/standalone-chrome
