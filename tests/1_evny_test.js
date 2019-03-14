@@ -1,5 +1,5 @@
 
-Feature('Egyéni vállalkozók nyilvántartása');
+Feature('1 Egyéni vállalkozók nyilvántartása');
 
 Scenario('Az EVNY Portál üzemel', (I) => {
     I.amOnPage('https://www.nyilvantarto.hu/evny-lekerdezo/');
