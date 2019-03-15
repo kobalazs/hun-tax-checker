@@ -1,5 +1,5 @@
 
-Feature('1 Egyéni vállalkozók nyilvántartása');
+Feature('1 Egyéni vállalkozók nyilvántartásának ellenőrzése');
 
 Scenario('Az EVNY Portál üzemel', (I) => {
     I.amOnPage('https://www.nyilvantarto.hu/evny-lekerdezo/');
@@ -7,7 +7,7 @@ Scenario('Az EVNY Portál üzemel', (I) => {
 });
 
 Scenario('A vállalkozás állapota működő', (I) => {
-    console.log('  * Nyilvántartási szám: ' + process.env.NYILVANTARTASI_SZAM);
+    console.log('  ℹ Nyilvántartási szám: ' + process.env.NYILVANTARTASI_SZAM);
     I.amOnPage('https://www.nyilvantarto.hu/evny-lekerdezo/');
     I.fillField('form[name=form2] input[name=nyilvszam]', process.env.NYILVANTARTASI_SZAM);
     I.click('Lekérdezés', 'form[name=form2]');

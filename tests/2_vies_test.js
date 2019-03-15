@@ -7,7 +7,7 @@ Scenario('A European Commission oldala üzemel', (I) => {
 });
 
 Scenario('A közösségi (EU) adószám létezik', (I) => {
-    console.log('  * Adószám eleje: ' + process.env.ADOSZAM_ORSZAGKODJA + process.env.ADOSZAM_ELSO_NYOLC_SZAMJEGYE);
+    console.log('  ℹ Adószám eleje: ' + process.env.ADOSZAM_ORSZAGKODJA + process.env.ADOSZAM_ELSO_NYOLC_SZAMJEGYE);
     I.amOnPage('http://ec.europa.eu/taxation_customs/vies/');
 
     I.selectOption('select[name=memberStateCode]', process.env.ADOSZAM_ORSZAGKODJA);
