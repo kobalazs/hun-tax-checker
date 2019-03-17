@@ -7,14 +7,14 @@ Scenario('A European Commission oldala üzemel', (I) => {
 });
 
 Scenario('A közösségi (EU) adószám létezik', (I) => {
-    console.log('  ℹ Adószám eleje: ' + process.env.ADOSZAM_ORSZAGKODJA + process.env.ADOSZAM_ELSO_NYOLC_SZAMJEGYE);
+    console.log('  ℹ Adószám: ' + process.env.ADOSZAM);
     I.amOnPage('http://ec.europa.eu/taxation_customs/vies/');
 
-    I.selectOption('select[name=memberStateCode]', process.env.ADOSZAM_ORSZAGKODJA);
-    I.fillField('input[name=number]', process.env.ADOSZAM_ELSO_NYOLC_SZAMJEGYE);
+    I.selectOption('select[name=memberStateCode]', process.env.ADOSZAM.substring(0, 2));
+    I.fillField('input[name=number]', process.env.ADOSZAM.substring(2, 10));
 
-    I.selectOption('select[name=requesterMemberStateCode]', process.env.ADOSZAM_ORSZAGKODJA);
-    I.fillField('input[name=requesterNumber]', process.env.ADOSZAM_ELSO_NYOLC_SZAMJEGYE);
+    I.selectOption('select[name=requesterMemberStateCode]', process.env.ADOSZAM.substring(0, 2));
+    I.fillField('input[name=requesterNumber]', process.env.ADOSZAM.substring(2, 10));
 
     I.click('Verify');
     I.wait(1);

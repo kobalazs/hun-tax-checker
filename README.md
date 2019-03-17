@@ -15,5 +15,5 @@ Unix-based system with Docker & Docker Compose installed and running
 1. ✔ Vállalkozás státusza az egyéni vállalkozók nyilvántartásában
 2. ✔ Közösségi (EU) adószám megléte
 3. ✔ Helyi iparűzési adó befizetési státusza (csak Budapesten)
-4. ⏳ Kamarai tagdíj befizetési státusza (csak Magyar Kereskedelmi és Iparkamara)
+4. ✔ Kamarai tagdíj befizetési státusza (csak Magyar Kereskedelmi és Iparkamara)
 5. ⏳ Adó folyószámla egyenleg (tartozások vagy túlfizetések)
