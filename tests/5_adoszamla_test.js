@@ -19,8 +19,11 @@ Scenario('Az adószámla lekérdezése elindítva', (I) => {
     I.wait(2);
     I.click('ide!');
     I.wait(2);
+    I.click('eBEV-szolgáltatás');
+    I.wait(2);
 
     I.amOnPage('https://ebev.nav.gov.hu/lekerdezes?showIgeny=fo');
+    I.click('Új lekérdezés');
     I.selectOption('select[name=0]', process.env.ADOAZONOSITO_JEL);
     I.click('Lekérdezés indítása');
 });
